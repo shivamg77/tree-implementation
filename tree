@@ -12,27 +12,37 @@ public class Tree {
         }
     }
 
-    Node insert(Node node, int value) {
-        if (node == null) {
-            return new Node(value);
+    public Node insert(Node node, int data)
+    {
+        if(node==null)
+        {
+            return new Node(data);
         }
 
-        if (value < node.data) {
-            if (node.left != null) {
-                insert(node.left, value);
-            } else
-                node.left = new Node(value);
-        } else if (value > node.data) {
-            if (node.right != null) {
-                insert(node.right, value);
-            } else
-                node.right = new Node(value);
+        if(data<node.data)
+        {
+            if(node.left!=null)
+            {
+                insert(node.left, data);
+            }
+            else
+                node.left=new Node(data);
+        }
+        else if(data>node.data)
+        {
+            if(node.right!=null)
+            {
+                insert(node.right, data);
+            }
+            else
+                node.right=new Node(data);
         }
         return node;
     }
 
-    void add(int data) {
-        root = insert(root, data);
+    public void add(int data)
+    {
+        root=insert(root, data);
     }
 
     void displayInOrder(Node node) {
