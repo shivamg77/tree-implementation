@@ -55,15 +55,21 @@ public class Tree {
         }
     }
 
-    void displayPreOrder(Node node) {
-        if (node == null) {
+
+
+    void displayPreOrder(Node node)  {
+        if (node == null) 
             return;
-        } else {
+         else 
+         {
             System.out.print(" " + node.data);
             displayPreOrder(node.left);
             displayPreOrder(node.right);
-        }
-    }
+          }
+      }
+    
+    
+    
 
     void displayPostOrder(Node node) {
         if (node == null) {
